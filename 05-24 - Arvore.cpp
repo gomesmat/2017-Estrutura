@@ -12,13 +12,6 @@ void insereArvore(int valor){
     struct no *atual;
     struct no *anterior;
 
-struct no{
-    int dado;
-    struct no *esq;
-    struct no *dir;
-};
-struct no *raiz = NULL;
-
 void insereArvore(int valor){
     struct no *atual;
     struct no *anterior;
