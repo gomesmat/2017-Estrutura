@@ -11,10 +11,6 @@ struct no *raiz = NULL;
 void insereArvore(int valor){
     struct no *atual;
     struct no *anterior;
-
-void insereArvore(int valor){
-    struct no *atual;
-    struct no *anterior;
     struct no *aux;
 
     aux = new(struct no);
