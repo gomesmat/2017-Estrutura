@@ -1,24 +1,28 @@
+
 #include <locale.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
 
-#define tam 5000000
+#define tam 50
 
-int vetor[tam];
+int vetor[tam], vetorOld[tam];
 int tamHeap = 0;
+int p, q, r;
 
 void gera(){
 	int i;
 	srand (time(NULL));
 	for(i=0; i<tam; i++) vetor[i] = rand();
+	i=0;
+	for(i=0; i<tam; i++) vetorOld[i] = vetor[i];
 }
 
 int partition(int p, int r){
 	int piv, aux;
 	piv = vetor[p];
-	i = p - 1;
-	j = r + 1;
+	int i = p - 1;
+	int j = r + 1;
 	while(true){
 		j--;
 		while(vetor[j] > piv){
@@ -45,7 +49,7 @@ void quickSort(int p, int r){
 
 void imprime(){
 	for(int i=0; i<tam; i++){
-		printf("%d\n", vetor[i]);
+		printf("%d\t||   %d\n", vetorOld[i], vetor[i]);
 	}
 }
 
@@ -53,13 +57,15 @@ int main(){
 	setlocale(LC_ALL, "Portuguese");
 	clock_t tempo1, tempo2;
 	gera();
-	printf("Vetor original:\n\n");
-	imprime();
-	printf("\n========================\n\n");
+//	printf("Vetor original:\n\n");
+//	imprime();
+//	printf("\n========================\n\n");
 	tempo1 = clock();
-	heapSort();
+	quickSort();
 	tempo2 = clock() - tempo1;
-	printf("Vetor ordenado:\n\n");
+//	printf("Vetor ordenado:\n\n");
 	imprime();
-	printf("\n>> Tempo de operaÁ„o: %.4f\n", (float) tempo2/CLOCKS_PER_SEC);
+	printf("\n>> Tempo de opera√ß√£o: %.4f\n", (float) tempo2/CLOCKS_PER_SEC);
 }
+
+// PANQUECA
