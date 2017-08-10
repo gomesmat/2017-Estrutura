@@ -47,5 +47,5 @@ int main(){
 	tempo2 = clock() - tempo1;
 	printf("Vetor ordenado:\n\n");
 	imprime();
-	printf("\n>> Tempo de operaÁ„o: %.4f\n", (float) tempo2/CLOCKS_PER_SEC);
+	printf("\n>> Tempo de opera√ß√£o: %.4f\n", (float) tempo2/CLOCKS_PER_SEC);
 }
