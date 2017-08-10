@@ -104,7 +104,6 @@ int main (){
     insereArvore(5);
     insereArvore(7);
     insereArvore(20);
-
-
-
 }
+
+// PANQUECA
