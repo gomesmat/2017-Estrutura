@@ -3,13 +3,15 @@
 #include <stdio.h>
 #include <time.h>
 
-#define tam 8888888
+#define tam 700
 
-int vetor[tam];
+int vetor[tam], vetorOld[tam];
 
 void gera(){
 	int i;
+	srand (time(NULL));
 	for(i=0; i<tam; i++) vetor[i] = rand();
+	for(i=0; i<tam; i++) vetorOld[i] = vetor[i];
 }
 
 void bubblesort(){
@@ -32,7 +34,7 @@ void bubblesort(){
 
 void imprime(){
 	for(int i=0; i<tam; i++){
-		printf("%d\n", vetor[i]);
+		printf(" %d\t  ||   %d\n", vetorOld[i], vetor[i]);
 	}
 }
 
@@ -40,14 +42,13 @@ int main(){
 	setlocale(LC_ALL, "Portuguese");
 	clock_t tempo1, tempo2;
 	gera();
-	printf("Vetor original:\n\n");
-	imprime();
-	printf("\n========================\n\n");
 	tempo1 = clock();
 	bubblesort();
 	tempo2 = clock() - tempo1;
-	printf("Vetor ordenado:\n\n");
+	printf(" Original ||   Ordenado\n\t  ||\n");
+	printf("========================\n");
 	imprime();
-	printf("\n>> Tempo de operaÁ„o: %.4f\n", (float) tempo2/CLOCKS_PER_SEC);
+	printf("\n>> Tempo de opera√ß√£o: %.4f\n", (float) tempo2/CLOCKS_PER_SEC);
 }
 
+// PANQUECA
