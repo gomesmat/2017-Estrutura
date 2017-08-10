@@ -49,3 +49,5 @@ int main(){
 	imprime();
 	printf("\n>> Tempo de operação: %.4f\n", (float) tempo2/CLOCKS_PER_SEC);
 }
+
+// PANQUECA
