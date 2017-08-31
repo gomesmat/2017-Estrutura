@@ -33,7 +33,7 @@ void moverParaFrente (int valor){
         }
         i++;
     }
-    printf(" Não achei!\n\n");
+    printf(" NÃ£o achei!\n\n");
 }
 
 void transposicao (int valor){
@@ -49,7 +49,7 @@ void transposicao (int valor){
         }
         i++;
     }
-    printf("\n Não achei!\n\n");
+    printf("\n NÃ£o achei!\n\n");
 }
 
 void sequencial (int valor){
@@ -62,7 +62,7 @@ void sequencial (int valor){
         }
         i++;
     }
-    printf(" Não achei!\n\n");
+    printf(" NÃ£o achei!\n\n");
 }
 
 void sequencialSentinela (int valor){
@@ -71,7 +71,7 @@ void sequencialSentinela (int valor){
     while(valor!=vetor[i]){
         i++;
     }
-    if (i==tam-1) printf(" Não achei!\n\n");
+    if (i==tam-1) printf(" NÃ£o achei!\n\n");
     else printf(" Achei!\n\n");
 }
 
